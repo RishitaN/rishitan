@@ -760,6 +760,8 @@ textarea.form-control {
 	min-height: auto;
 	max-width: 100%;
 	opacity: 0.8;
+	width: 100%;
+	
 }
 
 .grid figure figcaption {
