@@ -17,6 +17,50 @@
 
     <script src="script/js/modernizr.custom.js"></script>
     <script type="text/javascript">
+		function OpenSabio(){
+		
+		document.getElementById("modalSabio").style.display="block";
+		 
+		}
+		
+		function OpenSocGen(){
+		
+		document.getElementById("modalSocGen").style.display="block";
+		 
+		}
+		
+		function OpenIbm(){
+		
+		var modal = document.getElementById("modalIbm");
+		 modal.style.display = "block";
+		}
+		
+		function closeSabio(){
+		var modal = document.getElementById("modalSabio");
+		 modal.style.display = "none";
+		}
+		
+		function closeSocGen(){
+		var modal = document.getElementById("modalSocGen");
+		 modal.style.display = "none";
+		}
+		function closeIbm(){
+		var modal = document.getElementById("modalIbm");
+		 modal.style.display = "none";
+		}
+
+// When the user clicks anywhere outside of the modal, close it
+//var modal1 = document.getElementById("modalSabio")
+//var modal2 document.getElementById("modalSocGen")
+//var modal3 = document.getElementById("modalIbm")
+//window.onclick = function(event) {
+  //if (event.target == modal1 || event.target == madal2 || event.target == modal3 ) {
+    //modal1.style.display = "none";
+	//modal2.style.display = "none";
+	//modal3.style.display = "none";
+  //}
+  //}
+
         function Click_Sabio() {
             document.getElementById("Sabio").style.display = "block";
             document.getElementById("Socgen").style.display = "none";
@@ -147,6 +191,7 @@
 
     <section id="workex" class="pfblock pfblock-gray">
         <div class="container">
+		<div class="row">
             <div class="col-sm-6 col-sm-offset-3">
 
                 <div class="pfblock-header wow fadeInUp">
@@ -155,82 +200,108 @@
                 </div>
             </div>
 
-            <div class="row">
-
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <a href="#Sabio" onclick="Click_Sabio() ;return false;" style="font-weight:600">
-                        <div class="grid wow zoomIn">
-                             
-                            <figure class="effect-bubba">
-                               <img src="script/images/sabio.png" alt="Sabio" style="height:300px" />
-                                <figcaption>
-                                   
-                                    <h2><span>Sr. Software developer (2019-today)</span></h2>
-                                     
-                                    
-                                </figcaption>
-                            </figure>
-                        </div> 
-						
-                         My Responsibility >>
-                    </a>
-
-                </div>
-
-
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <a href="#Sabio" onclick="Click_SocGen() ;return false;" style="font-weight:600">
-                        <div class="grid wow zoomIn">
-                            <figure class="effect-bubba">
-                                <img src="script/images/SocGen.png" alt="SocGen" style="height:300px" />
-                                <figcaption>
-                                    <h2><span>Sr. Software Engineer (2016-2019)</span></h2>
-                                   
-                                    
-                                    
-                                </figcaption>
-                            </figure>
-
-                        </div>  
-						
-						My Responsibility >>
-                    </a>
-
-                </div>
-
-
-
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                    <a href="#Sabio" onclick="Click_Ibm() ;return false;" style="font-weight:600">
-                        <div class="grid wow zoomIn">
-                            <figure class="effect-bubba">
-                                <img src="script/images/IBM.png" alt="IBM" style="height:300px" />
-                                <figcaption>
-                                    
-                                    <h2><span>Application Developer (2013-1026)</span></h2>
-                                    
-                                </figcaption>
-                            </figure>
-
-                        </div>
-						
-                        My Responsibility >>
-                    </a>
-
-                </div>
             </div>
+			
+			<div class="row">
+			<div class="col-sm-4">
 
-            <div class="row">
+					<div class="iconbox wow slideInRight">
+						<div class="iconbox-icon">
+							
+                            <a href="https://sabiogroup.com/"><img src="script/images/Sabio1.png" alt="Sabio"  height="200" width="200"/></a>
+						</div>
+						<div class="iconbox-text">
+							<h3 >Sr. Software developer (2019-today)</h3>
+							<div class="iconbox-desc">
+								<a id="resSabio"  href="#workex"  onclick="OpenSabio() ;" style="font-weight:600">My responsibility >></a>
+							</div>
+						</div>
+					</div>
 
-                <div class="col-sm-6 col-sm-offset-3" id="Sabio" style="display: none">
+				</div>
 
-                    <div class="pfblock-header wow fadeInUp">
-                        <div class="pfblock-subtitle" align="justify" text-justify="distribute">
+				<div class="col-sm-4">
 
+					<div class="iconbox wow slideInRight">
+						<div class="iconbox-icon">
+							<a href="https://www.societegenerale.com/en"> <img src="script/images/SocGen.png" alt="Socgen" height="200" width="200" /></a>
+						</div>
+						<div class="iconbox-text">
+							<h3 >Sr. Software Engineer (2016-2019)</h3>
+							<div class="iconbox-desc">
+								<a href="#workex" onclick="OpenSocGen() ;" style="font-weight:600">My responsibility >></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				
+				<div class="col-sm-4">
+
+					<div class="iconbox wow slideInRight">
+						<div class="iconbox-icon">
+							 <a href="https://www.ibm.com/sg-en"><img src="script/images/ibm1.png" alt="IBM" height="200" width="200" style="margin-top:30px; margin-bottom:10px"/></a>
+						</div>
+						<div class="iconbox-text">
+						<h5></h5>
+						<h3>Application Developer (2013-2016)</h3>
+							<div class="iconbox-desc">
+								<a href="#workex" onclick="OpenIbm() ;" style="font-weight:600">My responsibility >></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			
+			
+			
+			<div class="modal-content" id="modalSocGen" style="display:none;">
+    <span class="close" id="closeSocGen" onclick="closeSocGen();">&times;</span>
+    <p><h2>SOCIETE GENERALE | Sr. Software Engineer </h2>
+                            <h3>3 years   (July 16 – Oct 19)</h3>
+                            <br />
+                            Responsible for development of trade Booking, Confirmation and Settlement
+                                process for Money Market.
+                               
+                                <br />
+                            ▪ Delivered modules like Internal deal mirroring, Rollover, Remittance and
+                                Implement Regulatory topics like FATCA/CRS/MiFiD.
+                               
+                                <br />
+                            ▪ Implemented Trade Reconciliation: internal, inter-company and back-toback
+                                reconciliation process for all manually booked deals under Asia
+                                entities.
+                               
+                                <br />
+                            ▪ Ensured technical quality excellence by following Test driven
+                                development using Nunit, Writing mock UTs using Rhino and Moq.
+                               
+                                <br />
+                            ▪ Maintained Code quality through code review and Code coverage
+                                using Sonar, Re-sharper and ensure CI by using Jenkin and deployment
+                                using software factories.
+                               
+                                <br />
+                            ▪ Developed T-SQL queries, stored procedures, and triggers using SQL.
+              
+                                <br />
+                            ▪ Responsible for SIT & UAT testing with business users, execute deployment
+                                plan, pre-release non-regression testing, and post release regression test.
+                               
+                                <br />
+                            ▪ Prepared batch files and schedule through Autosys.</p>
+	</div>
+	
+			<div class="modal-content" id="modalSabio" style="display:none;">
+    <span class="close" id="closeSabio" onclick="closeSabio();">&times;</span>
+    <p></br>
+							</br>
 
                             <h2>SABIO | Sr. Software Developer </h2>
-                            <h3>~2 years (Nov 19 – Present)5    </h3>
-                            <br />
+                            <h3>~2 years (Nov 19 – Present)    </h3>
+                           
                             ▪ Responsible for development of knowledge management system for the “Ask
                                 Jamie” chatbot for the Singapore Government agencies.
                                
@@ -271,62 +342,13 @@
                                
                                 <br />
                             ▪ Worked in Agile environment and followed CI/CD principles using Git,
-                                JIRA and Jenkins.
-                                
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-sm-6 col-sm-offset-3" id="Socgen" style="display: none">
-
-                    <div class="pfblock-header wow fadeInUp">
-                       
-                        <div class="pfblock-subtitle" align="justify" text-justify="distribute">
-
-                            </br>
-                            <h2>SOCIETE GENERALE | vSr. Software Engineer </h2>
-                            <h3>3 years   (July 16 – Oct 19)</h3>
-                            <br />
-                            Responsible for development of trade Booking, Confirmation and Settlement
-                                process for Money Market.
-                               
-                                <br />
-                            ▪ Delivered modules like Internal deal mirroring, Rollover, Remittance and
-                                Implement Regulatory topics like FATCA/CRS/MiFiD.
-                               
-                                <br />
-                            ▪ Implemented Trade Reconciliation: internal, inter-company and back-toback
-                                reconciliation process for all manually booked deals under Asia
-                                entities.
-                               
-                                <br />
-                            ▪ Ensured technical quality excellence by following Test driven
-                                development using Nunit, Writing mock UTs using Rhino and Moq.
-                               
-                                <br />
-                            ▪ Maintained Code quality through code review and Code coverage
-                                using Sonar, Re-sharper and ensure CI by using Jenkin and deployment
-                                using software factories.
-                               
-                                <br />
-                            ▪ Developed T-SQL queries, stored procedures, and triggers using SQL.
-              
-                                <br />
-                            ▪ Responsible for SIT & UAT testing with business users, execute deployment
-                                plan, pre-release non-regression testing, and post release regression test.
-                               
-                                <br />
-                            ▪ Prepared batch files and schedule through Autosys.
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-sm-6 col-sm-offset-3" id="ibm" style="display: none">
-
-                    <div class="pfblock-header wow fadeInUp">                        
-                        <div class="pfblock-subtitle" align="justify" text-justify="distribute">
-                            <h2>IBM | Application Developer </h2>
+                                JIRA and Jenkins.</p>
+  </div>
+			
+			<div class="modal-content" id="modalIbm" style="display:none;">
+    <span class="close" id="closeIbm" onclick="closeSabio();">&times;</span>
+    <p>
+	<h2>IBM | Application Developer </h2>
                             <h3>3 years (Jul 13 – Jul 16)   </h3>
                             <br />
                             </br>Responsible for Developing and Maintaining Web Application for Downstream retail application for the globally renowned Oil and Energy Sector client.
@@ -339,15 +361,16 @@
 </br>▪ Created Views for reporting purpose as requested by user.
 </br>▪ Successfully provided permanent solution to temporary workarounds and major bug fix by analysing the root cause for the issue on many key retail web applications
 </br>▪ Supported applications which involve multiple vendor co-ordination to ensure the timely data delivery
-</br>▪ Handled incident, service request, problem management, change management using SM9 tool by HP
-                        </div>
-                    </div>
-                </div>
+</br>▪ Handled incident, service request, problem management, change management using SM9 tool by HP</p>
+	</div>
+
+            
 
 
 
 
-            </div>
+
+
         </div>
         <!-- .container -->
     </section>
@@ -375,7 +398,7 @@
 					<div class="iconbox wow slideInLeft">
 						<div class="iconbox-icon">
 							
-                            <img src="script/images/NTU.png" alt="NTU"  height="200" style="border:1px black"/>
+                            <a href="https://www.ntu.edu.sg/"> <img src="script/images/NTU.png" alt="NTU"  height="200" style="border:1px black" /></a>
 						</div>
 						<div class="iconbox-text">
 							<h3 class="iconbox-desc">Masters - Information systems</h3>
@@ -392,7 +415,7 @@
 
 					<div class="iconbox wow slideInRight">
 						<div class="iconbox-icon">
-							 <img src="script/images/banasthali1.jpg" alt="Banasthali" height="200" />
+							<a href="http://www.banasthali.org/banasthali/wcms/en/home/">  <img src="script/images/banasthali1.jpg" alt="Banasthali" height="200" /></a>
 						</div>
 						<div class="iconbox-text">
 							<h3 class="iconbox-desc">BTech - computer Science</h3>
