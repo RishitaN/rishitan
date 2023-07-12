@@ -17,8 +17,17 @@
 
     <script src="script/js/modernizr.custom.js"></script>
     <script type="text/javascript">
-		function OpenSabio(){
+	        
+		function OpenTW(){
 		
+		document.getElementById("modalTW").style.display="block";
+		document.getElementById("modalSabio").style.display="none";
+		document.getElementById("modalSocGen").style.display="none";
+		document.getElementById("modalIbm").style.display="none";
+		 
+		}
+		function OpenSabio(){
+		document.getElementById("modalTW").style.display="none";
 		document.getElementById("modalSabio").style.display="block";
 		document.getElementById("modalSocGen").style.display="none";
 		document.getElementById("modalIbm").style.display="none";
@@ -26,17 +35,22 @@
 		}
 		
 		function OpenSocGen(){
-		
+		document.getElementById("modalTW").style.display="none";
 		document.getElementById("modalSocGen").style.display="block";
 		 document.getElementById("modalSabio").style.display="none";
 		document.getElementById("modalIbm").style.display="none";
 		}
 		
 		function OpenIbm(){
-		
+		document.getElementById("modalTW").style.display="none";
 		document.getElementById("modalIbm").style.display="block";
 		 document.getElementById("modalSocGen").style.display="none";
 		 document.getElementById("modalSabio").style.display="none";
+		}
+
+	    	function closeTW(){
+		var modal = document.getElementById("modalTW");
+		 modal.style.display = "none";
 		}
 		
 		function closeSabio(){
@@ -64,21 +78,30 @@
 	//modal3.style.display = "none";
   //}
   //}
+	function Click_TW() {
+	    document.getElementById("TW").style.display = "block"
+            document.getElementById("Sabio").style.display = "none";
+            document.getElementById("Socgen").style.display = "none";
+            document.getElementById("ibm").style.display = "none";
 
+        }
         function Click_Sabio() {
             document.getElementById("Sabio").style.display = "block";
+	    document.getElementById("TW").style.display = "none";
             document.getElementById("Socgen").style.display = "none";
             document.getElementById("ibm").style.display = "none";
 
         }
 
         function Click_SocGen() {
+		document.getElementById("TW").style.display = "none";
             document.getElementById("Sabio").style.display = "none";
             document.getElementById("Socgen").style.display = "block";
             document.getElementById("ibm").style.display = "none";
 
         }
         function Click_Ibm() {
+		document.getElementById("TW").style.display = "none";
             document.getElementById("Sabio").style.display = "none";
             document.getElementById("Socgen").style.display = "none";
             document.getElementById("ibm").style.display = "block";
@@ -208,6 +231,22 @@
             </div>
 			
 			<div class="row">
+				<div class="col-sm-4">
+
+					<div class="iconbox wow slideInRight">
+						<div class="iconbox-icon">
+							
+                            <a href="https://thoughtworks.com/"><img src="script/images/Sabio1.png" alt="Thoughtworks"  height="200" width="200"/></a>
+						</div>
+						<div class="iconbox-text">
+							<h3 >Sr. Consultant developer (2021-today)</h3>
+							<div class="iconbox-desc">
+								<a id="resTW"  href="#workex"  onclick="OpenTW() ;" style="font-weight:600">My responsibility >></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
 			<div class="col-sm-4">
 
 					<div class="iconbox wow slideInRight">
@@ -260,7 +299,36 @@
 
 			</div>
 			
-			
+			<div class="modal-content" id="modalTW" style="display:none;">
+    <span class="close" id="closeTW" onclick="closeTW();">&times;</span>
+    <p><h2>THOUGHTWORKS | Sr. Consultant Developer </h2>
+                            <h3> 2 years   (Oct 21 – prsent)</h3>
+                            <br />
+                            Responsible for development of website for an international Airlines. 
+                                <br />
+                            ▪ Responsible for technical consultancy, design and implement solution for the
+flight search feature.
+                               
+                                <br />
+                            ▪ Developed system to promote sales and deals.
+                               
+                                <br />
+                            ▪ Developed shareable components for flight search feature using microfrontend.
+                               
+                                <br />
+                            
+▪ Created Restful APIs and integrated with the client system to retrieve the data
+from the backend.
+                               
+                                <br />
+                            ▪ Performed A/B testing using Boxever.
+              
+                                <br />
+                           ▪ Setup Monorepo for the shared components.
+                               
+                                <br />
+                          ▪ Setup logging and data analytics using datadog</p>
+	</div>
 			
 			<div class="modal-content" id="modalSocGen" style="display:none;">
     <span class="close" id="closeSocGen" onclick="closeSocGen();">&times;</span>
